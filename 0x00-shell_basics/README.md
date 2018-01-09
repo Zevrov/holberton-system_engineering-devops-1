@@ -1,0 +1,1 @@
+This script will run to find the directory you are currently at
