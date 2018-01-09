@@ -1,1 +1,1 @@
-This script will run to find the directory you are currently at
+This directory is full of scripts that are the basics of using Shell
