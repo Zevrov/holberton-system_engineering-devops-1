@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script is displaying numbers and superstitions
+FILE="/etc/passwd"
+while IFS=":" read -r -a line
+do
+    echo "${line[0]}:${line[3]}:${line[5]}"
+done < "$FILE"
