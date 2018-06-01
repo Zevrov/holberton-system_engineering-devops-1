@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying numbers and superstitions
+# This script prints out the /etc/passwd file
 FILE="/etc/passwd"
 while IFS=":" read -r -a line
 do
