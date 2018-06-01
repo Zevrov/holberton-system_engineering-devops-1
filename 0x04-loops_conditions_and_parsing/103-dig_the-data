@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script prinnts log files and count the how many uniq Ip there are
+awk '{ print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
