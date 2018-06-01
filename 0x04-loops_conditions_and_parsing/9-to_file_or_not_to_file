@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying display if file eshist
+if [ -e "$ ]
+then
+    echo "bad luck"
+else
+    echo "Holberton School"
+fi
+let i=i+1

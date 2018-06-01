@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times and at 9th print "Hi"
+# This script is displaying prints the time of a clock
 hour=0
 while [ $hour -le 12 ]
 do
