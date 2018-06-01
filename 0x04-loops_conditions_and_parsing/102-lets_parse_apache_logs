@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script prinnts log files using awk
+awk '{ print $1 " " $9}' apache-access.log
