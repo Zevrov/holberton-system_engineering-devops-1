@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# This script displayes currently running proceses
+# This script displayes only bash proceses
 # shellcheck disable=SC2009
 ps axuf | grep bash
