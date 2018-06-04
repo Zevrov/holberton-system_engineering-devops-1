@@ -1,0 +1,1 @@
+This poroject contains examples of signals and processes in linux
