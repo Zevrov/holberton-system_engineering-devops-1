@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Configure Nginx server so that /redirect_me redirecting to another page
+sudo apt-get -y update
+sudo apt-get -y install nginx
+service nginx start
+n_s = 
+sudo sed -i "" /etc/nginx/sites-available/default
+sudo service nginx restart
