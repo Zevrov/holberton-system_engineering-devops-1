@@ -1,1 +1,0 @@
-This project contains how to use SSH and connect to servers
