@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# This connects to my server using ssh keys
-ssh -i ~/.ssh/holberton ubuntu@35.237.55.203
