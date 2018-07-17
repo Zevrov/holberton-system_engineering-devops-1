@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# use top command to find apche2 server not working
+# this script starts apache server
+sudo service apache2 start
