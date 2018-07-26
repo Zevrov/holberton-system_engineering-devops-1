@@ -1,0 +1,1 @@
+This project contiani exapmles for configure management
