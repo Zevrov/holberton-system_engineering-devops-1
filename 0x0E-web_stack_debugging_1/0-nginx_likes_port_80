@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # create fix for nginx server
+sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
 sudo service nginx start
