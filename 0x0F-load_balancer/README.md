@@ -1,1 +1,1 @@
-This project cointians load balancer examples
+This project cointians load balancer examples for the servers
