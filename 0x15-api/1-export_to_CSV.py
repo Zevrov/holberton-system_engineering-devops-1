@@ -19,7 +19,6 @@ def gather_data_csv(employee_id):
     fieldname = ["userId", "username", "completed", "title"]
     with open("{}.csv".format(employee_id), 'w') as f:
         writer = DictWriter(f, fieldnames=fieldname, quoting=QUOTE_ALL)
-        writer.writeheader()
         for arg in get("https://jsonplaceholder.typicode.com/todos/").json():
             if arg["userId"] == employee_id:
                 del arg["id"]
