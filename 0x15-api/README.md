@@ -1,0 +1,1 @@
+This project contians how to automate using api for servers
