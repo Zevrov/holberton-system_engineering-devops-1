@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+cv#!/usr/bin/python3
 """The API gather data for employee
 """
 from requests import get
@@ -25,8 +25,8 @@ def gather_data(employee_id):
             if arg["completed"]:
                 completed += 1
                 tasks.append(arg["title"])
-    print("Employee {} is done with tasks({}/{}):".format(name, total_task,
-                                                          completed))
+    print("Employee {} is done with tasks({}/{}):".format(name, completed,
+                                                          total_task))
     for task in tasks:
         print("\t {}".format(task))
 
