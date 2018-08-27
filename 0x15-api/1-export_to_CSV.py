@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """The API gather data for employee
 """
-from csv import DictWriter
+from csv import DictWriter, QUOTE_ALL
 from requests import get
 from sys import argv
 
@@ -18,7 +18,7 @@ def gather_data_csv(employee_id):
     name = json["username"]
     fieldname = ["userId", "username", "completed", "title"]
     with open("{}.csv".format(employee_id), 'w') as f:
-        writer = DictWriter(f, fieldnames=fieldname)
+        writer = DictWriter(f, fieldnames=fieldname, quoting=QUOTE_ALL)
         writer.writeheader()
         for arg in get("https://jsonplaceholder.typicode.com/todos/").json():
             if arg["userId"] == employee_id:
