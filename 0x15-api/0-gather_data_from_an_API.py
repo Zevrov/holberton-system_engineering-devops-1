@@ -10,8 +10,6 @@ def gather_data(employee_id):
     returns information about his/her TODO list progress
     Args:
         employee_id: id for each employee
-    Return:
-        returns information about employee todo list
     """
     json = get("https://jsonplaceholder.typicode.com/users/{}"
                .format(employee_id)).json()
