@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
     """
     headers = {'User-Agent': 'yook00627'}
     json = get('https://api.reddit.com/r/{}/about'.format(subreddit),
-            headers=headers).json()
+               headers=headers).json()
     try:
         sub = json['data']['subscribers']
         return sub
