@@ -14,18 +14,21 @@ def count_words(subreddit, word_list, after="", counter={}, t=0):
             counter[word] = 0
     headers = {'User-Agent': 'yook00627'}
     json = get('https://api.reddit.com/r/{}/hot?after={}'.
-               format(subreddit, after), headers=headers).json()
+               format(subreddit, after), headers=headers,
+               allow_redirects=False).json()
     try:
         key = json['data']['after']
         parent = json['data']['children']
         for obj in parent:
             for word in counter:
-                counter[word] += obj['data']['title'].lower().split(' ').count(word)
+                counter[word] += obj['data']['title'].lower().split(
+                    ' ').count(word)
         if key is not None:
             count_words(subreddit, word_list, key, counter, 1)
         else:
-            for word in sorted(word_list):
-                if counter[word] != 0:
-                    print('{}: {}'.format(word, counter[word]))
+            res = sorted(counter.items(), key=lambda i: i[1], reverse=True)
+            for key, value in res:
+                if value != 0:
+                    print('{}: {}'.format(key, value))
     except Exception:
         return None
