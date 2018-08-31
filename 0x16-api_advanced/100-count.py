@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Top Ten"""
 from requests import get
+from sys import argv
 
 
 def count_words(subreddit, word_list, after="", counter={}, t=0):
@@ -14,8 +15,7 @@ def count_words(subreddit, word_list, after="", counter={}, t=0):
             counter[word] = 0
     headers = {'User-Agent': 'yook00627'}
     json = get('https://api.reddit.com/r/{}/hot?after={}'.
-               format(subreddit, after), headers=headers,
-               allow_redirects=False).json()
+               format(subreddit, after), headers=headers).json()
     try:
         key = json['data']['after']
         parent = json['data']['children']
@@ -32,3 +32,6 @@ def count_words(subreddit, word_list, after="", counter={}, t=0):
                     print('{}: {}'.format(key, value))
     except Exception:
         return None
+
+if __name__ == "__main__":
+    count_words(argv[1], argv[2].split(' '))
