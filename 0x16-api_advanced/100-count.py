@@ -22,7 +22,7 @@ def count_words(subreddit, word_list, after="", counter={}, t=0):
         for obj in parent:
             for word in counter:
                 counter[word] += obj['data']['title'].lower().split(
-                    ' ').count(word)
+                    ' ').count(word.lower())
         if key is not None:
             count_words(subreddit, word_list, key, counter, 1)
         else:
@@ -32,6 +32,3 @@ def count_words(subreddit, word_list, after="", counter={}, t=0):
                     print('{}: {}'.format(key, value))
     except Exception:
         return None
-
-if __name__ == "__main__":
-    count_words(argv[1], argv[2].split(' '))
