@@ -4,7 +4,7 @@
 
 # Python (programming language)
 
-<img alt="Python" src=https://github.com/yook00627/holbertonschool-higher_level_programming/blob/master/python-logo.png>
+<img alt="DevOps" src=https://github.com/yook00627/holberton-system_engineering-devops/blob/master/Devops-toolchain.svg.png>
 
 # What is DEVOPS?
 
