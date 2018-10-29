@@ -2,6 +2,16 @@
 
 <img alt="DevOps" src=https://github.com/yook00627/holberton-system_engineering-devops/blob/master/0x14-mysql/KkrkDHT.png>
 
+**What you should learn from this project**
+
+    At the end of this project you are expected to be able to explain to anyone, without the help of Google:
+
+* What is the main role of a database
+* What is a database replica
+* What is the purpose of a database replica
+* Why database backups need to be stored in different physical locations
+* What operation should you regularly perform to make sure that your database backup strategy actually works
+
 ## Exercises
 
 [0-mysql_configuration_primary](./0-mysql_configuration_primary)
@@ -24,20 +34,18 @@ Having a replica member on for your MySQL database has 2 advantages:
 * Once MySQL is installed on web-01, create a database containing at least one table with one record (name and what type of fields does not matter)
 * Once MySQL replication is setup, add a new record in your table via MySQL on web-01 and check if the record has been replicated in MySQL web-02. If you see it, it means your replication is working!
 
-[1-isdigit.c](./1-isdigit.c)
+[1-mysql_backup](./1-mysql_backup)
 ```
-Write a function that checks for a digit (0 through 9).
+What if the data center where both your primary and replica database servers are hosted are down because of a power outage or even worse: flooding, fire? Then all your data would inaccessible or lost. That’s why you want to backup and store them in a different system in another physical location. This can be achieved by dumping your MySQL data, compressing them and storing them in a different data center.
+Write a Bash script that generates a MySQL dump and creates a compressed archive out of it.
+Requirements:
 ```
-* Prototype: int _isdigit(int c);
-* Returns 1 if c is a digit
-* Returns 0 otherwise
-
-[2-mul.c](./2-mul.c )
-```
-Collaboration is multiplication
-Write a function that multiplies two integers.
-```
-* Prototype: int mul(int a, int b);
+* The MySQL dump must contain all your MySQL databases
+* The MySQL dump must be named backup.sql
+* The MySQL dump file has to be compressed to a tar.gz archive
+* This archive must have the following name format: day-month-year.tar.gz
+* The user to connect to the MySQL database must be root
+* The Bash script accepts one argument that is the password used to connect to the MySQL database
 
 ## Author
 ### Kevin Yook 
