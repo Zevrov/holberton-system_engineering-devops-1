@@ -1,5 +1,7 @@
 # 0x18. Webstack monitoring
 
+<img alt="DevOps" src=https://github.com/yook00627/holberton-system_engineering-devops/blob/master/0x13-firewall/V1HjQ1Y.png>
+
 **What you should learn from this project**
 
     At the end of this project you are expected to be able to explain to anyone, without the help of Google:
